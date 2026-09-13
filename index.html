@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +10,79 @@
     <title>filter-js</title>
 </head>
 <body>
+
+  <form id="filterForm">  
     
+    <select name="category" id="categoryFilter">
+        <option value="all">همه</option>
+        <option value="lipstick">رژلب</option>
+        <option value="blush">رژگونه</option>
+        <option value="mascara">ریمل</option>
+        
+    </select>
+
+    <label for="minPriceFilter">از</label>
+    <input id="minPriceFilter" type="number" name="minPrice">
     
+    <label for="maxPriceFilter">تا</label>
+    <input id="maxPriceFilter" type="number" name="maxPrice">
+    
+
+    <button class="btn btn-primary" id="applyFilterBtn">اعمال فیلتر</button>
+
+  </form>
+
+<section id="productList">
+
+    <article class="product-card" data-category="lipstick">
+        <img class="product-image" src="images/a.1.jpg"  alt="رژ">
+        <h2 class="product-name" >رژ لب</h2>
+        <p class="product-color">رنگ: صورتی رز</p>
+        <span class="product-price">قیمت: ۱۸۹٬۰۰۰ تومان</span>
+        <button class="add-to-cart-btn">افزودن به سبد</button>
+    </article>
+
+    <article class="product-card" data-category="lipstick">
+        <img class="product-image" src="images/b.1.jpg" alt="رژ">
+        <h2 class="product-name">رژ</h2>
+        <p class="product-color">رنگ: صورتی</p>
+        <span class="product-price">قیمت: ۲۶۵٬۰۰۰ تومان</span>
+        <button class="add-to-cart-btn">افزودن به سبد</button>
+    </article>    
+
+    <article class="product-card" data-category="blush">
+        <img class="product-image" src="images/d.1.jpg" alt="رژگونه" >
+        <h2 class="product-name">رژگونه</h2>
+        <p class="product-color">رنگ: صورتی</p>
+        <span class="product-price">قیمت: ۵۶۵٬۰۰۰ تومان</span>
+        <button class="add-to-cart-btn">افزودن به سبد</button>
+    </article>
+    
+    <article class="product-card" data-category="lipstick">
+        <img class="product-image" src="images/a.2.jpg" alt="رژ" >
+        <h2 class="product-name">رژ لب</h2>
+        <p class="product-color">رنگ: نود هلویی</p>
+        <span class="product-price">قیمت: ۵۹۵٬۰۰۰ تومان</span>
+        <button class="add-to-cart-btn">افزودن به سبد</button>
+    </article>   
+    
+    <article class="product-card" data-category="mascara">
+        <img  class="product-image" src="images/f.1.jpg" alt="ریمل" >
+        <h2 class="product-name"> ریمل</h2>
+        <p class="product-color">رنگ: مشکی</p>
+        <span class="product-price">قیمت: ۲۲۵٬۰۰۰ تومان</span>
+        <button class="add-to-cart-btn">افزودن به سبد</button>
+    </article>    
+    
+    <article class="product-card" data-category="mascara">
+        <img class="product-image" src="images/f.2.jpg" alt="ریمل" >
+        <h2 class="product-name"> ریمل</h2>
+        <p class="product-color">رنگ: مشکی</p>
+        <span class="product-price">قیمت: ۳۲۵٬۰۰۰ تومان</span>
+        <button class="add-to-cart-btn">افزودن به سبد</button>
+    </article>     
+
+</section>
 
     <script src="js/index.js"></script>
 </body>
