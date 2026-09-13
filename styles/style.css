@@ -1,0 +1,222 @@
+
+:root {
+    --primary: #C97B84;          
+    --primary-hover: #A85D67;    
+    --primary-light: #F3D9DC;    
+    --background: #FFF4F2;       
+    --card-background: #FFFFFF;
+    --cart-btn: #f0d1d5;
+    --cart-btn-hover: #B4646E; 
+    --text-primary: #4A2E2E;     
+    --text-secondary: #9C7B7E;   
+    --border: #F0C9C9;           
+    --accent: #D4AF37;           
+    --accent-light: #F5E6B8;     
+    --danger: #E85D5D;           
+}     
+
+ body{
+    background-color: var(--background);
+     font-family: 'Vazirmatn', sans-serif;
+ }    
+
+
+#productList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    
+    
+}
+
+ .product-image {
+    width: 160px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-left: 10px;
+    
+ }
+
+ .product-card{
+    background-color: var(--card-background) ;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    width: 160px;
+    border-radius: 10px;
+    padding: 5px;
+    transform:translateX(-20px);
+    
+    
+    
+ }
+
+
+ #filterForm {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-light);
+    margin-bottom: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 340px;
+    width: 350px;
+    margin-right: 20px;
+    
+    
+    
+
+ }
+
+ #filterForm h2 {
+    margin-right: 150px;
+    font-size: 30px;
+    margin-bottom: 0;
+ }
+
+ label{
+    margin-right: 27px;
+    margin-bottom: 3px;
+ }
+
+ .btn-primary {
+   margin-bottom: 30px;
+   width: 70px;
+   margin-right: 140px;
+   background-color: var(--primary);
+   border: none;
+   border-radius: 5px;
+   padding: 5px;
+   font-family:'Vazirmatn', sans-serif ;
+   cursor: pointer;
+ }
+
+ #minPriceFilter{
+
+    width: 300px;
+    direction: ltr;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin-bottom: 15px;
+ }
+
+
+ #maxPriceFilter{
+    direction: ltr;
+    width: 300px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+
+ }
+
+ #categoryFilter {
+    width: 310px;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+ }
+
+ .product-name {
+    color: var(--text-primary);
+ }
+
+ .product-color {
+    color:var(--text-secondary) ;
+ }
+
+ .add-to-cart-btn{
+    border-radius: 5px;
+    margin-top: 5px;
+    border: none;
+    padding: 5px;
+    font-family:'Vazirmatn', sans-serif ;
+    background-color: var(--cart-btn);
+    cursor: pointer;
+
+
+ }
+
+ .add-to-cart-btn:hover {
+    background-color: var(--cart-btn-hover);
+
+ }
+
+
+
+ @media (min-width: 424px) {
+    #filterForm{
+        width: 389px;
+        margin-right: 21px;
+        
+    }
+
+    #minPriceFilter{
+        width: 300px;
+        direction: ltr;
+        margin-right: 35px;
+        border-radius: 5px;
+        border: none;
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+
+
+    #maxPriceFilter{
+        direction: ltr;
+        width: 300px;
+        margin-bottom: 20px;
+        margin-right: 35px;
+
+
+    }
+
+    #categoryFilter {
+        width: 310px;
+        margin-right: 35px;
+
+    }
+
+    label{
+        margin-right: 37px;
+        margin-bottom: 3px;
+    }
+
+    .btn-primary{
+        margin-right: 150px;
+        width: 80px;
+        font-family:'Vazirmatn', sans-serif ;
+    }
+
+    .product-image {
+        width: 170px;
+        height: 200px;
+        
+    }
+
+    .product-card{
+
+        width: 170px;
+        transform: translateX(-21px);
+        margin-bottom: 5px;
+ 
+    }    
+
+    #productList {
+        
+    }
+ }
+
+ @media (min-width: 767px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+ }
