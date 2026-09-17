@@ -26,7 +26,16 @@ const products = [
     
     }
     ,
+
+    { name:"کرم زیر چشم" ,
+      color:"کاهش تیرگی و آبرسانی",
+      price: 1265000  ,
+      category:"hygiene",
+      type:"eye-cream",
+      image:"images/g.1.jpg"
     
+    }       
+    ,
     { name:"رژگونه" ,
       color:"صورتی ",
       price: 565000  ,
@@ -55,6 +64,15 @@ const products = [
     
     }    
     ,
+    { name:"نرم کننده دست" ,
+      color:"آلوئه‌ورا",
+      price: 565000  ,
+      category:"hygiene",
+      type:"cream",
+      image:"images/h.1.jpg"
+    
+    }       
+    ,
     { name:"ریمل" ,
       color:"مشکی ",
       price: 925000  ,
@@ -72,7 +90,16 @@ const products = [
       type:"blush",
       image:"images/d.2.jpg"
     
-    }    
+    }   
+    ,
+    { name:"نرم کننده صورت" ,
+      color:"پوست خشک و نرمال",
+      price: 756000  ,
+      category:"hygiene",
+      type:"cream",
+      image:"images/h.2.jpg"
+    
+    }          
     ,
     { name:"رژگونه" ,
       color:"صورتی",
@@ -81,5 +108,25 @@ const products = [
       type:"blush",
       image:"images/c.1.jpg"
     
-    }        
+    }   
+    ,
+    { name:"ماسک مو" ,
+      color:"موهای خشک و اسیب دیده",
+      price: 1256000  ,
+      category:"hygiene",
+      type:"hair-mask",
+      image:"images/i.1.jpg"
+    
+    }     
+    ,
+    { name:"اسکراب بدن" ,
+      color:"وانیل و نارگیل",
+      price: 956000  ,
+      category:"hygiene",
+      type:"body-scrub",
+      image:"images/i.2.jpg"
+    
+    }     
+    
+   
 ]
