@@ -1,0 +1,8 @@
+const filterForm = document .querySelector("#filterForm")
+const categoryCheckboxes = document .querySelectorAll('[name="category"]')
+const typeCheckboxes = document .querySelectorAll('[name="type"]')
+const minPriceInput = document .querySelector("#minPriceFilter")
+const maxPriceInput = document .querySelector("#maxPriceFilter")
+const priceRangeInput = document .querySelector(".priceRange")
+const applyFilterBtn = document .querySelector("#applyFilterBtn")
+const productListContainer = document .querySelector("#productList")
