@@ -151,4 +151,56 @@ function renderProducts (productsArray) {
 
 };
 
+function getSelectedFilters(){
+    const selectedCategories = Array.from(categoryCheckboxes)
+
+    .filter(function(checkbox) {
+    return checkbox.checked;
+    })
+
+    .map(function(checkbox) {
+    return checkbox.value;
+    });
+
+
+    const selectedTypes = Array.from(typeCheckboxes)
+
+    .filter(function(checkbox) {
+    return checkbox.checked;
+    })
+
+    .map(function(checkbox) {
+    return checkbox.value;
+    });
+
+    const minPrice = Number(minPriceInput.value);
+    const maxPrice = Number(maxPriceInput.value);
+
+    return {
+       categories: selectedCategories,
+       types: selectedTypes,
+       minPrice: minPrice,
+       maxPrice: maxPrice
+    };
+
+
+ 
+}
+
+function filterProducts(productsArray, filters) {
+
+    return productsArray.filter(function(product) {
+       const categoryMatch = filters.categories.length === 0 || filters.categories.includes(product.category);
+       const typeMatch = filters.types.length === 0 || filters.types.includes(product.type);
+       const priceMatch = product.price >= filters.minPrice && (filters.maxPrice === 0 || product.price <= filters.maxPrice);
+
+       return categoryMatch && typeMatch && priceMatch;
+
+    });
+
+}
+
+
+    
+
 renderProducts(products);
