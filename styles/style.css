@@ -6,11 +6,11 @@
     --background: #FFF4F2;       
     --card-background: #FFFFFF;
     --cart-btn: #f0d1d5;
-    --welecome:#e3b3b8;
+    --welcome:#e3b3b8;
     --cart-btn-hover: #B4646E; 
     --nav-color: #540f0f; 
     --nav-background-color: #e2d6c8; 
-    --text-primarry: #4A2E2E;     
+    --text-primary: #4A2E2E;     
     --text-secondary: #9C7B7E;   
     --border: #F0C9C9;           
     --accent: #D4AF37;           
@@ -43,7 +43,7 @@ header {
 }
 
 .welcome-bar {
-    background-color: var(--welecome );
+    background-color: var(--welcome );
     padding: 4px ;
     text-align: center;
     width: 100%;
@@ -438,6 +438,15 @@ header {
     
 
  }
+
+
+ .no-results {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 16px;
+    padding: 30px 0;
+    grid-column: 1 / -1;
+}
 
 
 /*----------------tablet------------------*/

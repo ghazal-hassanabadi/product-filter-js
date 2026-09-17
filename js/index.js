@@ -134,6 +134,12 @@ const products = [
 function renderProducts (productsArray) {
     productListContainer.innerHTML ="";
 
+    if(productsArray.length === 0){
+        productListContainer.innerHTML = "<p class='no-results'>محصول مورد نظر یافت نشد</p>";
+         return;
+    }
+        
+
     productsArray.forEach(function(product) {
         const card = document.createElement("article");
         card.classList.add("product-card");
@@ -148,6 +154,8 @@ function renderProducts (productsArray) {
 
         productListContainer.appendChild(card);
     });
+
+
 
 };
 
@@ -206,6 +214,12 @@ applyFilterBtn.addEventListener("click", function(event) {
     const filters = getSelectedFilters();
     const filtered = filterProducts(products, filters);
     renderProducts(filtered);
+
+});
+
+
+priceRangeInput.addEventListener("input", function() {
+    maxPriceInput.value = priceRangeInput.value;
 
 });
     
