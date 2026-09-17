@@ -200,7 +200,14 @@ function filterProducts(productsArray, filters) {
 
 }
 
+applyFilterBtn.addEventListener("click", function(event) {
 
+    event.preventDefault();
+    const filters = getSelectedFilters();
+    const filtered = filterProducts(products, filters);
+    renderProducts(filtered);
+
+});
     
 
 renderProducts(products);
