@@ -130,3 +130,25 @@ const products = [
     
    
 ]
+
+function renderProducts (productsArray) {
+    productListContainer.innerHTML ="";
+
+    productsArray.forEach(function(product) {
+        const card = document.createElement("article");
+        card.classList.add("product-card");
+
+        card.innerHTML = `
+        <img class="product-image" src="${product.image}" alt="${product.name}">
+        <h3 class="product-name">${product.name}</h3>
+        <p class="product-color">${product.color}</p>
+        <span class="product-price">قیمت: ${product.price.toLocaleString("fa-IR")} تومان</span>
+        <button class="add-to-cart-btn">افزودن به سبد</button>
+        `;
+
+        productListContainer.appendChild(card);
+    });
+
+};
+
+renderProducts(products);
