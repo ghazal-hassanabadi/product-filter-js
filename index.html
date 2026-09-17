@@ -11,32 +11,88 @@
     <title>filter-js</title>
 </head>
 <body>
-<div class="page-layout">
-  <form id="filterForm">  
-    <h2>فیلتر</h2>
-    <select name="category" id="categoryFilter">
-        
-        <option value="all">همه</option>
-        <option value="lipstick">رژلب</option>
-        <option value="blush">رژگونه</option>
-        <option value="mascara">ریمل</option>
-        
-    </select>
 
-    <label for="minPriceFilter">حداقل</label>
-    <input id="minPriceFilter" type="number" name="minPrice" placeholder="تومان">  
+<header class="site-header" id="siteHeader">
+    <section class="welcome-bar" id="welcomeBar">
+        <h1 class="welcome-text" id="welcomeText">به فروشگاه رزالین خوش آمدید </h1>
+    </section>
     
-    <label for="maxPriceFilter">حداکثر</label>
-    <input id="maxPriceFilter" type="number" name="maxPrice" placeholder="تومان">
     
+      <section class="searchUser">  
+        <search class="search-box" id="searchBox">
+            <input type="text" class="search-input" id="searchInput" placeholder="جستجو...">
+
+        </search>
+            <button class="login-btn" id="loginBtn">
+                <i class="fa-solid fa-user"></i>
+            </button>
+      </section>
+    <nav class="main-nav" id="mainNav">        
+        <ul class="nav-list" id="navList">
+            <li class="nav-item"><a href="#" class="nav-link active-link">خانه</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">محصولات</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">تماس با ما</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">سبد خرید</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+
+<main class="page-layout">
+
+
+  <form id="filterForm">  
+
+    
+
+    <section class="filter">
+    <h2 class="filter-title">فیلتر محصولات</h2>
+
+ <details class="filter-row">
+    <summary>دسته‌بندی</summary>
+    <div class="filter-row-content">
+        <label><input type="checkbox" name="category" value="makeup"/> آرایشی</label>
+        <label><input type="checkbox" name="category" value="hygiene" /> بهداشتی</label>
+    </div>
+ </details>
+
+    
+    <details class="filter-row">
+        <summary>محدوده قیمت</summary>
+        <div class="filter-row-content">
+            <section class="mini">
+                <label for="minPriceFilter">حداقل قیمت</label>
+                <input type="number" id="minPriceFilter" name="minPriceFilter" placeholder="۰ تومان" />
+            </section>
+            <section class="max">
+                <label for="maxPriceFilter">حداکثر قیمت</label>
+                <input type="number" id="maxPriceFilter" name="max-price" placeholder="۵,۰۰۰,۰۰۰ تومان" />
+            </section>
+            <section class="priceSlider">
+                <input class="priceRange" type="range" min="0" max="5000000" step="100000" value="0">
+            </section>
+        </div>
+    </details>
+
+    <details class="filter-row">
+        <summary>نوع محصول</summary>
+        <div class="filter-row-content">
+            <label><input type="checkbox" name="type"  value="all"/> همه</label>
+            <label><input type="checkbox" name="type" value="lipstick" /> رژلب</label>
+            <label><input type="checkbox" name="type" value="blush"/> رژگونه</label>
+            <label><input type="checkbox" name="type" value="mascara"/> ریمل</label>
+        </div>
+    </details>
 
     <button class="btn-primary" id="applyFilterBtn">اعمال فیلتر</button>
-
+</section>
   </form>
 
 <section id="productList">
 
-    <article class="product-card" data-category="lipstick">
+    <article class="product-card" data-category="makeup" data-type="lipstick">
         <img class="product-image" src="images/a.1.jpg"  alt="رژ">
         <h3 class="product-name" >رژ لب</h3>
         <p class="product-color">رنگ: صورتی رز</p>
@@ -44,7 +100,7 @@
         <button class="add-to-cart-btn">افزودن به سبد</button>
     </article>
 
-    <article class="product-card" data-category="lipstick">
+    <article class="product-card" data-category="makeup" data-type="lipstick">
         <img class="product-image" src="images/b.1.jpg" alt="رژ">
         <h3 class="product-name">رژ</h3>
         <p class="product-color">رنگ: صورتی</p>
@@ -52,7 +108,7 @@
         <button class="add-to-cart-btn">افزودن به سبد</button>
     </article>    
 
-    <article class="product-card" data-category="blush">
+    <article class="product-card" data-category="makeup" data-type="blush" >
         <img class="product-image" src="images/d.1.jpg" alt="رژگونه" >
         <h3 class="product-name">رژگونه</h3>
         <p class="product-color">رنگ: صورتی</p>
@@ -60,7 +116,7 @@
         <button class="add-to-cart-btn">افزودن به سبد</button>
     </article>
     
-    <article class="product-card" data-category="lipstick">
+    <article class="product-card" data-category="makeup" data-type="lipstick">
         <img class="product-image" src="images/a.2.jpg" alt="رژ" >
         <h3 class="product-name">رژ لب</h3>
         <p class="product-color">رنگ: نود هلویی</p>
@@ -68,7 +124,7 @@
         <button class="add-to-cart-btn">افزودن به سبد</button>
     </article>   
     
-    <article class="product-card" data-category="mascara">
+    <article class="product-card" data-category="makeup" data-type="mascara">
         <img  class="product-image" src="images/f.1.jpg" alt="ریمل" >
         <h3 class="product-name"> ریمل</h3>
         <p class="product-color">رنگ: مشکی</p>
@@ -76,15 +132,15 @@
         <button class="add-to-cart-btn">افزودن به سبد</button>
     </article>    
     
-    <article class="product-card" data-category="mascara">
+    <article class="product-card" data-category="makeup" data-type="mascara">
         <img class="product-image" src="images/f.2.jpg" alt="ریمل" >
         <h2 class="product-name"> ریمل</h2>
         <p class="product-color">رنگ: مشکی</p>
         <span class="product-price">قیمت: ۳۲۵٬۰۰۰ تومان</span>
-        <button class="add-to-cart-btn">افزودن به سبد</button>
+        <button class="add-to-cart-btn1">افزودن به سبد</button>
     </article>     
 
-    <article class="product-card" data-category="blush">
+    <article class="product-card" data-category="makeup" data-type="blush">
         <img class="product-image" src="images/d.2.jpg" alt="رژگونه" >
         <h3 class="product-name">رژگونه</h3>
         <p class="product-color">رنگ: هلویی</p>
@@ -92,7 +148,7 @@
         <button class="add-to-cart-btn">افزودن به سبد</button>
     </article>    
 
-    <article class="product-card" data-category="blush">
+    <article class="product-card" data-category="makeup" data-type="blush">
         <img class="product-image" src="images/c.1.jpg" alt="رژگونه" >
         <h3 class="product-name">رژگونه</h3>
         <p class="product-color">رنگ: صورتی</p>
@@ -101,7 +157,7 @@
     </article>    
 
 </section>
-</div>
+</main>
     <script src="js/index.js"></script>
 </body>
 </html>
